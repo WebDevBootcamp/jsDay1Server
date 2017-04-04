@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Weblab</title>
+        <style>
+            body { 
+                background: blue;
+                color: white;
+            }
+        </style>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            console.log('hello world!');
+            document.write('hello world');
+
+
+
+            $(document).ready(function(){
+              var colors = ["blue", "green", "magenta","orange","red","orange","cyan"]    
+
+              var i = 0;
+              $("#changecolor").click(function(){
+                  i++; 
+                  if(i==colors.length) i = 0;
+                  $("body").css("background", colors[i]); 
+                  console.log("you clicked! -> " + colors[i])
+              })
+
+            });
+
+            
+            
+            
+        </script>
+    </head>
+    <body id="bg">
+        <h1>Hello!</h1>
+        <button id="changecolor">Change!</button>
+
+    </body>
+</html>
